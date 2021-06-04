@@ -1,0 +1,4 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+node ./node_modules/fit-commit-js/lib/hook.js .git/COMMIT_EDITMSG
