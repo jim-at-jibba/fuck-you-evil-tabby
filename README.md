@@ -12,10 +12,11 @@
 </p>
 
 > This all came about after an evil, bully of a tabby cat arrived in our neighbourhood. It was terrorising my cats causing
-stress and injury and I needed to be able to deter it without upsetting my own cats. I decided to completely over engineer
-it and to train a machine learning model will detect unknown cats and make them go away. The method of detering them is still
-up for debate but will like involve a high pitched noise or jet of air.
+> stress and injury and I needed to be able to deter it without upsetting my own cats. I decided to completely over engineer
+> it and to train a machine learning model will detect unknown cats and make them go away. The method of detering them is still
+> up for debate but will like involve a high pitched noise or jet of air.
 
+Inspired by [Crow Detector](https://github.com/traumverloren/crow-detector)
 
 ## Install
 
