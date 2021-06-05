@@ -1,5 +1,5 @@
-const gpio = require("onoff").Gpio
-const pir = new gpio(4, "in", "both")
+import {Gpio} from "onoff"
+const pir = new Gpio(4, "in", "both")
 
 console.log("Starting kitty cam")
 
