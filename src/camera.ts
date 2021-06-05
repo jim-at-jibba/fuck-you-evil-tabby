@@ -1,6 +1,5 @@
 import {spawn} from "child_process"
 
-let count: number = 1
 let hasMotion: boolean = false
 
 export function startPhoto() {
@@ -19,29 +18,28 @@ export function takePhoto() {
   if (!hasMotion) return
 
   // eslint-disable-next-line node/no-path-concat
-  const filename = `/home/pi/code/photos/image_${count}.jpg`
-  // const args = [
-  //   "-rot", // rotate 90 degrees
-  //   "90",
-  //   "-n", // no preview
-  //   "-t", // time to take photo
-  //   "1000", // 1 second
-  //   "-w", // width
-  //   "400",
-  //   "-h", // height
-  //   "400",
-  //   "-ev",
-  //   "auto",
-  //   "auto",
-  //   "-o",
-  //   filename,
-  // ]
-  const args = ["-o", filename]
+  const filename = `/home/pi/code/photos/image_${new Date().getTime()}.jpg`
+  const args = [
+    "-rot", // rotate 90 degrees
+    "90",
+    "-n", // no preview
+    "-t", // time to take photo
+    "1000", // 1 second
+    "-w", // width
+    "400",
+    "-h", // height
+    "400",
+    "-ev",
+    "auto",
+    "auto",
+    "-o",
+    filename,
+  ]
+  //   const args = ["-o", filename]
   const child = spawn("raspistill", args)
 
   child.on("exit", (code) => {
     console.log(filename + " was taken")
-    count++
     if (hasMotion) takePhoto()
   })
 }
