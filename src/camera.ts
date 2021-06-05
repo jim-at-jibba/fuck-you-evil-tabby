@@ -20,22 +20,23 @@ export function takePhoto() {
 
   // eslint-disable-next-line node/no-path-concat
   const filename = `~/code/photos/image_${count}.jpg`
-  const args = [
-    "-rot", // rotate 90 degrees
-    "90",
-    "-n", // no preview
-    "-t", // time to take photo
-    "1000", // 1 second
-    "-w", // width
-    "400",
-    "-h", // height
-    "400",
-    "-ev",
-    "auto",
-    "auto",
-    "-o",
-    filename,
-  ]
+  // const args = [
+  //   "-rot", // rotate 90 degrees
+  //   "90",
+  //   "-n", // no preview
+  //   "-t", // time to take photo
+  //   "1000", // 1 second
+  //   "-w", // width
+  //   "400",
+  //   "-h", // height
+  //   "400",
+  //   "-ev",
+  //   "auto",
+  //   "auto",
+  //   "-o",
+  //   filename,
+  // ]
+  const args = ["-o", filename]
   const child = spawn("raspistill", args)
 
   child.on("exit", (code) => {
