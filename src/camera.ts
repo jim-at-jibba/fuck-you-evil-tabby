@@ -24,14 +24,11 @@ export function takePhoto() {
     "90",
     "-n", // no preview
     "-t", // time to take photo
-    "1000", // 1 second
+    "1", // 1 second
     "-w", // width
     "400",
     "-h", // height
     "400",
-    "-ev",
-    "auto",
-    "auto",
     "-o",
     filename,
   ]
