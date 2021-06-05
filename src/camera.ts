@@ -19,7 +19,7 @@ export function takePhoto() {
   if (!hasMotion) return
 
   // eslint-disable-next-line node/no-path-concat
-  const filename = `${__dirname}/photos/image_${count}.jpg`
+  const filename = `~/code/photos/image_${count}.jpg`
   const args = [
     "-rot", // rotate 90 degrees
     "90",
